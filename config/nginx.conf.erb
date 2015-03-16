@@ -26,6 +26,8 @@ http {
 	#Must read the body in 5 seconds.
 	client_body_timeout 25;
 
+	client_max_body_size 3M;
+
 	upstream app_server {
 		server unix:/tmp/nginx.socket fail_timeout=0;
  	}
